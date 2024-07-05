@@ -1,4 +1,5 @@
 import Image from "next/image";
+import lazyload from "vanilla-lazyload";
 
 import Button from "@mui/material/Button";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
@@ -109,7 +110,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center bg-black gap-5">
+      <div className="flex flex-col justify-center items-center bg-black gap-5 p-10">
         <div className="flex flex-col justify-center items-center text-white gap-5">
           <span className="text-3xl font-bold uppercase">
             THE ORIGINAL VIETNAMESE HOT SAUCE
@@ -120,9 +121,11 @@ export default function Home() {
           </span>
         </div>
         <iframe
+          className="lazy player-ratio"
           width="560"
           height="315"
           src="https://www.youtube.com/embed/wRduM7MQ5vw?si=CduSOOJqUrkbNuKC"
+          data-src="https://www.youtube.com/embed/wRduM7MQ5vw?si=CduSOOJqUrkbNuKC"
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
